@@ -31,10 +31,12 @@ app.config['SWAGGER'] = {
 }
 swagger = Swagger(app)
 
+
 @app.teardown_appcontext
 def teardown_session(exception):
     """ Closes storage session """
     storage.close()
+
 
 @app.errorhandler(404)
 def not_found(error):
