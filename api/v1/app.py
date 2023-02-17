@@ -2,7 +2,7 @@
 """ Script that imports a Blueprint and runs Flask """
 from flask import Flask, make_response, jsonify
 from flask_cors import CORS
-from models.engine import storage
+from models import storage
 from api.v1.views import app_views
 from os import getenv
 from flasgger import Swagger
